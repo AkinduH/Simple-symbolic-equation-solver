@@ -32,3 +32,37 @@ Note that these are not our usual arithmetic operations where we follow the BODM
 Sample binary tree for the expression “1 + (2 * 3) + 3 ^ 2”
 
 ![image](https://github.com/AkinduH/Simple_symbolic_equation_solver/assets/164672047/653e150f-58aa-4be8-a54e-416facff85c8)
+
+Expression: 1 + (2 * 3) + 3 ^ 2
+
+Use the insert method to add nodes
+
+Begin with forming the root node for the tree.
+
+root = Node(('OPERAND', 1))
+
+Form the rest of the tree by inserting data to the root node.
+
+root = root.insert(('OPERATOR', '+'), False)
+
+root = root.insert(('OPERAND', 2), False)
+
+root = root.insert(('OPERATOR', '*'), True)
+
+root = root.insert(('OPERAND', 3), False)
+
+root = root.insert(('OPERATOR', '+'), False)
+
+root = root.insert(('OPERAND', 3), False)
+
+root = root.insert(('OPERATOR', '^'), False)
+
+root = root.insert(('OPERAND', 2), False)
+
+Get the output.
+
+root.get_output() 
+
+Should print 100
+
+
